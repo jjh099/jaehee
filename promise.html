@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let myCalc = new Promise(function (resolve, reject) {
+      //     let han = "test";
+      //     if (han == "test") {
+      //       resolve();
+      //     } else {
+      //       reject();
+      //     }
+      //     resolve(100);
+      //   });
+
+      //   myCalc
+      //     .then(function () {
+      //       console.log("성공입니다.");
+      //     })
+      //     .catch(function () {
+      //       console.log("실패입니다.");
+      //     });
+
+      async function fn1() {
+        console.log("성공");
+        let myfn = new Promise(function (resolve, reject) {
+          resolve();
+        });
+        myfn.catch(function () {
+          console.log("실패");
+        });
+      }
+      fn1();
+
+      async function fn2() {
+        let myfn2 = await fn2();
+        console.log("성공");
+      }
+      fn2();
+    </script>
+  </body>
+</html>
